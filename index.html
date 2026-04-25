@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة د. أحمد ستار لطب وتجميل الأسنان</title>
+
+    <!-- ==========================================================
+        1. Google Fonts: خط Tajawal العصري
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+    2. ربط ملفات CSS و JavaScript الخارجية
+    ========================================================== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ==========================================================
+        2.5. Calendly Inline Widget CSS
+    / ملاحظة: استبدل YOUR_USERNAME و YOUR_EVENT_TYPE ببياناتك
+    ========================================================== -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        3. القائمة العلوية (Header / Navbar)
+        - الشعار، روابط التنقل، زر الحجز
+    ========================================================== -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">عيادة د. أحمد ستار</a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#about">عن الطبيب</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+            <li><a href="#booking" class="btn-nav">احجز موعدك</a></li>
+        </ul>
+
+        <!-- زر الهامبرغر للشاشات الصغيرة -->
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+    <!-- ==========================================================
+        4. القسم الرئيسي (Hero Section)
+        - عنوان ترحيبي، نص فرعي، زر حجز بارز
+    ========================================================== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>احصل على ابتسامة أحلامك</h1>
+            <p>نقدم لك أحدث تقنيات طب وتجميل الأسنان بأيدٍ خبيرة، لضمان راحتك وجمال ابتسامتك في عيادة د. أحمد ستار.</p>
+            <a href="#booking" class="btn-main">احجز موعدك الآن</a>
+        </div>
+
+        <!-- تصميم زخرفي بديل للصورة الشخصية -->
+        <div class="hero-visual">
+            <div class="shape-circle"></div>
+            <div class="shape-icon">🦷</div>
+            <div class="shape-dot"></div>
+            <div class="shape-dot"></div>
+            <div class="shape-dot"></div>
+            <div class="shape-cross">✦</div>
+            <div class="shape-cross">✦</div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+        5. قسم الخدمات (Services Section)
+        - 4 بطاقات: تبييض، تقويم، زراعة، حشوات جذور
+    ========================================================== -->
+    <section class="services" id="services">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="services-grid">
+            <!-- بطاقة 1: تبييض الأسنان -->
+            <div class="card">
+    <div class="card-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 10C7 6 8 3 12 3C16 3 17 6 17 10C17 14 15.5 15 12 15C8.5 15 7 14 7 10Z" stroke="#2c3e50" stroke-width="1.5"/>
+            <path d="M9 14.5L8 18C7.5 19.5 8.5 21 10 21H14C15.5 21 16.5 19.5 16 18L15 14.5" stroke="#2c3e50" stroke-width="1.5"/>
+            <path d="M19 4L20 6M20 4L18 6" stroke="#f1c40f" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M5 7L6 9M6 7L4 9" stroke="#f1c40f" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="9" r="1" fill="#f1c40f"/>
+        </svg>
+    </div>
+    <h3>تبييض الأسنان</h3>
+    <p>استعد بياض أسنانك الطبيعي باستخدام أحدث تقنيات الليزر الآمنة والفعالة.</p>
+</div>
+
+           <div class="card">
+    <div class="card-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 10C7 6 8 3 12 3C16 3 17 6 17 10C17 14 15.5 15 12 15C8.5 15 7 14 7 10Z" stroke="#2c3e50" stroke-width="1.5"/>
+            <path d="M9 14.5L8 18C7.5 19.5 8.5 21 10 21H14C15.5 21 16.5 19.5 16 18L15 14.5" stroke="#2c3e50" stroke-width="1.5"/>
+            
+            <path d="M6 10H18" stroke="#95a5a6" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="10.5" y="8.5" width="3" height="3" rx="0.5" fill="#3498db"/>
+            <rect x="15" y="9" width="2" height="2" rx="0.5" fill="#3498db"/>
+            <rect x="7" y="9" width="2" height="2" rx="0.5" fill="#3498db"/>
+        </svg>
+    </div>
+    <h3>تقويم الأسنان</h3>
+    <p>حلول متكاملة لصف أسنان متناسق وابتسامة مثالية بأنواع متعددة من التقويم.</p>
+</div>
+
+            <!-- بطاقة 3: زراعة الأسنان -->
+        <div class="card">
+    <div class="card-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 11C7 7 8 3 12 3C16 3 17 7 17 11C17 13 15.5 14 12 14C8.5 14 7 13 7 11Z" stroke="#2c3e50" stroke-width="2"/>
+            <path d="M12 14V21M9 17H15M10 20H14" stroke="#3498db" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+    <h3>زراعة الأسنان</h3>
+    <p>تعويض الأسنان المفقودة بأفضل الخامات العالمية لضمان المتانة والمظهر الطبيعي.</p>
+</div>
+
+            <!-- بطاقة 4: حشوات الجذور -->
+        <div class="card">
+    <div class="card-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 10C7 6 8 3 12 3C16 3 17 6 17 10C17 12 16 13 15 15C15 18 16 21 13 21C12 21 12 19 12 17C12 19 12 21 11 21C8 21 9 18 9 15C8 13 7 12 7 10Z" stroke="#2c3e50" stroke-width="1.5"/>
+            <path d="M12 7V14M11 11H13" stroke="#e74c3c" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+    </div>
+    <h3>حشوات الجذور</h3>
+    <p>علاج دقيق لإنقاذ الأسنان التالفة باستخدام تقنيات حديثة لتنظيف وحشو جذور الأسنان.</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+        6. قسم عن الطبيب (About Section)
+        - نبذة مختصرة عن الدكتور وخبراته
+    ========================================================== -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="img/WhatsApp Image 2026-04-25 at 1.55.53 AM.jpeg" alt="صورة د. أحمد ستار">
+            </div>
+            <div class="about-content">
+                <h2>عن د. أحمد ستار</h2>
+                <p>
+                    الدكتور <strong>أحمد ستار</strong>، خريج جامعة بابل، يمتلك خبرة تمتد لـ <strong>4 سنوات</strong>
+                    في مجال جراحة وطب الأسنان. يسعى دائماً لدمج الفن مع الطب لتقديم نتائج تجميلية مبهرة لمرضاه.
+                </p>
+                <div class="qualifications">
+                    <div class="qual-box">
+                        <span class="qual-icon">🎓</span>
+                        <span>خريج جامعة بابل</span>
+                    </div>
+                    <div class="qual-box">
+                        <span class="qual-icon">⏱️</span>
+                        <span>4 سنوات خبرة</span>
+                    </div>
+                    <div class="qual-box">
+                        <span class="qual-icon">📞</span>
+                        <span>07813599144</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+        7. قسم حجز المواعيد عبر Calendly (Booking Section)
+        - ملاحظة: استبدل YOUR_USERNAME و YOUR_EVENT_TYPE في data-url
+         ببيانات حسابك على Calendly بعد إنشائه.
+    ========================================================== -->
+    <section class="booking" id="booking">
+        <div class="booking-container">
+            <h2 class="section-title">احجز موعدك الآن</h2>
+            <p class="booking-subtitle">اختر الوقت المناسب لك من التقويم أدناه</p>
+
+            <!-- حاوية Calendly Inline Widget -->
+            <div class="calendly-wrapper">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/drahmedhh86/30min?month=2026-04&date=2026-04-28"
+                    style="min-width:320px;height:700px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         8. الفوتر (Footer)
+         - أوقات العمل، العنوان، رقم الهاتف
+    ========================================================== -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>أوقات العمل</h3>
+                <p>السبت - الخميس</p>
+                <p>4:00 عصراً - 9:00 مساءً</p>
+            </div>
+            <div class="footer-box">
+                <h3>العنوان</h3>
+                <p>محافظة بابل -المدحتية</p>
+                <p>بالقرب من مستشفى المدحتية</p>
+            </div>
+            <div class="footer-box">
+                <h3>تواصل معنا</h3>
+                <p>هاتف: 07813599144</p>
+                <p>واتساب: متوفر للاستفسار</p>
+            </div>
+        </div>
+        <p class="copy">© 2026 جميع الحقوق محفوظة لعيادة د. أحمد ستار لطب وتجميل الأسنان</p>
+    </footer>
+
+    <!-- ==========================================================
+         9. زر WhatsApp العائم (Floating WhatsApp Button)
+         - تصميم احترافي بأيقونة SVG
+    ========================================================== -->
+    <a href="https://wa.me/9647813599144" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب"
+        title="تواصل معنا عبر واتساب">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                fill="currentColor" />
+        </svg>
+        <span class="whatsapp-label">واتساب</span>
+    </a>
+
+    <!-- ==========================================================
+         10. سكريبت Calendly Inline Widget
+    ========================================================== -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- ==========================================================
+         11. ربط ملف JavaScript المحلي
+    ========================================================== -->
+    <script src="script.js"></script>
+</body>
+
+</html>

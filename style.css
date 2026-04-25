@@ -1,0 +1,721 @@
+/* ==========================================================
+   ملف أنماط عيادة د. أحمد ستار لطب وتجميل الأسنان
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. المتغيرات العامة (CSS Variables)
+   ---------------------------------------------------------- */
+:root {
+    --primary: #2c7da0;       /* الأزرق الطبي — يعبر عن الثقة */
+    --primary-dark: #1a5a75;  /* درجة أغمق للـ Hover */
+    --secondary: #61a5c2;     /* أزرق فاتح مساعد */
+    --accent: #e8f4f8;        /* خلفية زرقاء فاتحة جداً */
+    --light-bg: #f8fafd;      /* رمادي فاتح — خلفية عامة */
+    --text-color: #2d3436;    /* لون النص الأساسي */
+    --text-muted: #636e72;    /* نصوص ثانوية */
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+/* ----------------------------------------------------------
+   2. إعادة الضبط والتنسيقات الأساسية
+   ---------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* تنقل انسيابي عند النقر على الروابط */
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.7;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+/* تنسيق الروابط */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* إزالة القائمة المنقطة */
+ul {
+    list-style: none;
+}
+
+/* تنسيق الصور */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ----------------------------------------------------------
+   3. القائمة العلوية (Navbar)
+   ---------------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* شعار العيادة */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+/* روابط التنقل */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--primary);
+    background: var(--accent);
+}
+
+/* زر الحجز في القائمة */
+.nav-links li a.btn-nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 24px;
+    font-weight: 700;
+}
+
+.nav-links li a.btn-nav:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+/* ----------------------------------------------------------
+   4. زر الهامبرغر (للشاشات الصغيرة)
+   ---------------------------------------------------------- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1100;
+}
+
+.menu-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* ----------------------------------------------------------
+   5. القسم الرئيسي (Hero Section)
+   ---------------------------------------------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 8%;
+    background: var(--light-bg);
+    min-height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* النصوص */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+/* الزر الرئيسي */
+.btn-main {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(44, 125, 160, 0.35);
+    transition: var(--transition);
+}
+
+.btn-main:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(44, 125, 160, 0.45);
+}
+
+/* الزخارف التوضيحية */
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+}
+
+.shape-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: absolute;
+    z-index: 1;
+}
+
+.shape-icon {
+    font-size: 7rem;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+.shape-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--secondary);
+    position: absolute;
+}
+
+/* توزيع النقاط بشكل عشوائي */
+.hero-visual .shape-dot:nth-of-type(3) { top: 15%; right: 20%; }
+.hero-visual .shape-dot:nth-of-type(4) { bottom: 20%; left: 15%; width: 10px; height: 10px; background: var(--primary); }
+.hero-visual .shape-dot:nth-of-type(5) { top: 50%; left: 10%; width: 8px; height: 8px; }
+
+.shape-cross {
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    opacity: 0.6;
+}
+
+.hero-visual .shape-cross:nth-of-type(6) { top: 10%; left: 25%; }
+.hero-visual .shape-cross:nth-of-type(7) { bottom: 15%; right: 20%; font-size: 1.2rem; }
+
+/* ----------------------------------------------------------
+   6. تنسيق العناوين الرئيسية للأقسام
+   ---------------------------------------------------------- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
+/* ----------------------------------------------------------
+   7. قسم الخدمات (Services Section)
+   ---------------------------------------------------------- */
+.services {
+    padding: 80px 8%;
+    background: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* بطاقة الخدمة */
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+/* أيقونة البطاقة */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.card:hover .card-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ----------------------------------------------------------
+   8. قسم عن الطبيب (About Section)
+   ---------------------------------------------------------- */
+.about {
+    padding: 80px 8%;
+    background: var(--light-bg);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* صورة الدكتور */
+.about-image {
+    flex: 0 0 320px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 6px solid var(--white);
+    box-shadow: var(--shadow-hover);
+    transition: var(--transition);
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
+/* المحتوى النصي */
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.about-content strong {
+    color: var(--primary);
+}
+
+/* صناديق المؤهلات */
+.qualifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.qual-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.qual-icon {
+    font-size: 1.3rem;
+}
+
+/* ----------------------------------------------------------
+   9. قسم نموذج الحجز (Booking Section)
+   ---------------------------------------------------------- */
+.booking {
+    padding: 80px 8%;
+    background: var(--white);
+}
+
+.booking-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.booking-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+/* حاوية Calendly */
+.calendly-wrapper {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------------------------------------------------
+   10. الفوتر (Footer)
+   ---------------------------------------------------------- */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 60px 8% 25px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-box h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+    margin: 8px auto 0;
+}
+
+.footer-box p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* حقوق النشر */
+.copy {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+/* ----------------------------------------------------------
+   11. زر WhatsApp العائم (Floating Button)
+   - تصميم حبري (Pill) أنيق بأيقونة SVG ونص
+   ---------------------------------------------------------- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background: #25d366;
+    color: var(--white);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.whatsapp-float:hover {
+    background: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* تأثير النبض */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ----------------------------------------------------------
+   12. التصميم المتجاوب (Responsive Design)
+   ---------------------------------------------------------- */
+
+/* --- أجهزة التابلت (أقل من 992px) --- */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+
+    .shape-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-image {
+        flex: 0 0 auto;
+        max-width: 300px;
+    }
+
+    .qualifications {
+        justify-content: center;
+    }
+}
+
+/* --- الهواتف المحمولة (أقل من 768px) --- */
+@media (max-width: 768px) {
+    /* إخفاء روابط التنقل وإظهار زر الهامبرغر */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 30px 30px;
+        gap: 5px;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 1.05rem;
+    }
+
+    .nav-links li a.btn-nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* تحويل زر الهامبرغر إلى X عند الفتح */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Services */
+    .services {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    /* Calendly */
+    .calendly-wrapper {
+        border-radius: 12px;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .whatsapp-float svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Footer */
+    .footer-content {
+        gap: 30px;
+    }
+}
+
+/* --- شاشات صغيرة جداً (أقل من 400px) --- */
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn-main {
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+
+    .shape-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .shape-icon {
+        font-size: 5rem;
+    }
+
+    .qual-box {
+        font-size: 0.85rem;
+        padding: 10px 14px;
+    }
+}
+
